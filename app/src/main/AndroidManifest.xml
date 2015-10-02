@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stevenkovach.chemapp" >
+
+    <uses-permission android:name="android.permission.wake_lock" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/appName"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainPage"
+            android:label="@string/appName"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TimerActivity"
+            android:label="@string/title_activity_timer" >
+        </activity>
+        <activity
+            android:name=".chemSearch"
+            android:label="@string/title_activity_chem_search" >
+        </activity>
+       <!-- looked like a duplicate so was commente out to compile.
+       <activity
+            android:name=".chem_properties"
+            android:label="@string/title_activity_chem_properties" >
+        </activity>-->
+        <activity
+            android:name=".chemProperties"
+            android:label="@string/title_activity_chem_properties" >
+        </activity>
+        <activity
+            android:name=".chemStorage"
+            android:label="@string/title_activity_chem_storage" >
+        </activity>
+    </application>
+
+</manifest>

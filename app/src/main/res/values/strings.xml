@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appName">Chemical Spill</string>
+    <string name="actionSettings">Settings</string>
+    <string name="hoodText">Hood</string>
+    <string name="labText">Laboratory Room</string>
+    <string name="customText">Custom</string>
+    <string name="length">L:</string>
+    <string name="width">W:</string>
+    <string name="height">H:</string>
+    <string name="ventRate">Ventilation Rate:</string>
+    <string name="workSpace">Work Space</string>
+    <string name="chemicalInfo">Chemical Information</string>
+    <string name="chemStorage">Chemical Storage Information</string>
+    <string name="chemicalNotFound">Chemical Not Found</string>
+    <string name="amountSpilled">Amount Spilled:</string>
+    <string name="safeEntryTime"><u>Safe Entry Time</u></string>
+    <string name="hours">hrs:</string>
+    <string name="minutes">min:</string>
+    <string name="seconds">sec</string>
+    <string name="maxAmount"><u>Maximum Amount</u></string>
+    <string name="safeAmountValue">Safe Value</string>
+    <string name="grams">g</string>
+    <string name="liters">L</string>
+    <string name="pounds">lbs</string>
+    <string name="roomArea">Area: </string>
+    <string name="searchTitle">Chemical Search</string>
+    <string name="searchHint">Search Chemicals</string>
+    <string name="startTimer">Start Timer</string>
+    <string name="findChemButton">Find Chemical</string>
+    <string name="idlhText">IDLH:</string>
+    <string name="pelText">PEL:</string>
+    <string name="densityText">Density:</string>
+    <string name="mwText">Molecular Weight:</string>
+    <string name="bpfText">Boiling Point:</string>
+    <string name="lflText">Lower Flammability Limit:</string>
+    <string name="uflText">Upper Flammability Limit:</string>
+    <string name="flashText">Flash Point:</string>
+    <string name="okayButton">Okay</string>
+    <string name="idlhTimerText">Initial Hazardous\nSubstance Concentration</string>
+    <string name="introMessage">This APP is NOT intended to be used during emergency situations and
+        does not replace Material Safety Data Sheets. In the case of an emergency retrieve to a safe location and call:
+        \n\nPolice/ Fire Department/ EMS: \n911
+        \n\nEnvironmental Health and Safety: \n(512) 471-3511
+        \n\nOccupational Health Services: \n(512) 471-4647
+        \n\nPoison Control: \n1-800-222-1222
+    </string>
+    <string name="recommendExtraTime">We recommend that you wait for an extra 50% of the calculated time</string>
+
+
+    <string-array name="standardSizeList">
+        <item>Std1</item>
+        <item>Std2</item>
+        <item>Std3</item>
+    </string-array>
+    <string-array name="roomUnitList">
+        <item>Feet</item>
+        <item>Meters</item>
+    </string-array>
+    <string-array name="ventUnitList">
+        <item>Rms/Hr</item>
+        <item>m^3/Hr</item>
+    </string-array>
+    <string-array name="tlvPelUnits">
+        <item>ppm</item>
+        <item>mg/L</item>
+    </string-array>
+    <string-array name="amountUnits">
+        <item>L</item>
+        <item>mL</item>
+        <item>gal</item>
+        <item>g</item>
+    </string-array>
+
+    <string name="title_activity_searchable">SearchableActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_timer">TimerActivity</string>
+    <string name="title_activity_chem_search">chemSearch</string>
+    <string name="title_activity_chem_properties">chem_properties</string>
+    <string name="title_activity_chem_storage">chemStorage</string>
+
+</resources>

@@ -1,0 +1,275 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/overallLayout"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/workSpace"
+            android:id="@+id/workSpaceButton"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/workSpaceLayout"
+            android:visibility="gone">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hoodText"
+                android:id="@+id/hoodCheck"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/labText"
+                android:id="@+id/labCheck"
+                android:checked="false" />
+
+            <Spinner
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:id="@+id/standardSizeSpinner"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone"
+                android:contextClickable="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/customText"
+                android:id="@+id/customCheck"
+                android:checked="false"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/roomUnitsLayout"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roomLWH">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/length"
+                        android:id="@+id/length"
+                        android:layout_marginLeft="40dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <EditText
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lengthValue"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/width"
+                        android:id="@+id/width"
+                        android:layout_gravity="center_vertical"/>
+
+                    <EditText
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/widthValue"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/height"
+                        android:id="@+id/height"
+                        android:layout_gravity="center_vertical"/>
+
+                    <EditText
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/heightValue"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionDone"/>
+
+                    <Spinner
+                        android:layout_width="150dp"
+                        android:layout_height="42dp"
+                        android:id="@+id/roomUnitSpinner"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:layout_gravity="right|top"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roomVentRate">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ventRate"
+                        android:id="@+id/ventRate"
+                        android:layout_marginLeft="48dp"/>
+
+                    <EditText
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/roomVentRateValue"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionDone"/>
+
+                    <Spinner
+                        android:layout_width="150dp"
+                        android:layout_height="42dp"
+                        android:id="@+id/ventUnitSpinner"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:layout_gravity="right|top"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/findChemButton"
+            android:id="@+id/findChemButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chemicalInfoLayout"
+            android:visibility="visible">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amountSpilled"
+                    android:id="@+id/amountSpilled"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="17dp"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/amountSpilledValue"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"/>
+
+                <Spinner
+                    android:layout_width="105dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/amountSpilledSpinner"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chemStorage"
+                android:id="@+id/chemStorageButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/safeEntryTime"
+                android:id="@+id/maxAmount"
+                android:layout_marginTop="40dp"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hours"
+                android:id="@+id/hours"
+                android:layout_marginLeft="10dp"
+                android:textSize="25dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minutes"
+                android:id="@+id/minutes"
+                android:textSize="25dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seconds"
+                android:id="@+id/seconds"
+                android:textSize="25dp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="@string/startTimer"
+            android:id="@+id/startTimerButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</ScrollView>
