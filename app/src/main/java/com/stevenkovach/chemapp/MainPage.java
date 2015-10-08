@@ -98,6 +98,7 @@ public class MainPage extends Activity {
     public double LFL;
     public double UFL;
     public double FlashPoint;
+    public double VDensity;
 
     public String mInput;
     public String chemName;
@@ -551,8 +552,10 @@ public class MainPage extends Activity {
         double R = 0.00008205; //m^3*atm/mol*K
         double amountSpilledGrams = amountSpilledValueNum;
         double ventRateRmsPerHour = roomVentRateValueNum;
+        double massChange;
+        double moleLFL;
 
-
+        VDensity = 1 * MW / (R*roomTemp);
 
         if(roomVentRateValueNum != 0 && amountSpilledValueNum != 0 && lengthValueNum != 0 && widthValueNum != 0 && heightValueNum != 0 && chemicalChosen == true) {
 
@@ -589,12 +592,16 @@ public class MainPage extends Activity {
             //No if statement for grams because it st ays the same
 
             //Start Calculations
-            labFlowRate = volume * ventRateRmsPerHour;
-            volOverflow = volume / labFlowRate;
+            labFlowRate = volume * ventRateRmsPerHour;// m^3/hr
+            //volOverflow = volume / labFlowRate;
             moleHSC = amountSpilledGrams / MW;
-            moleInLab = ((1 * volume) / (R * roomTemp));
-            initialHSC = moleHSC / moleInLab;
-            safeMinutes = -(volOverflow) * Math.log(PEL / (initialHSC*1000000)) * 60;
+            //moleInLab = ((1 * volume) / (R * roomTemp));
+            //initialHSC = moleHSC / moleInLab;
+            moleLFL = 0.25*volume*VDensity*LFL;
+            massChange = Math.log(moleLFL/moleHSC);
+            safeMinutes=-volume/labFlowRate*massChange * 60;
+
+            //safeMinutes = -(volOverflow) * Math.log(PEL / (initialHSC*1000000)) * 60;
 
             safeMinutes = round(safeMinutes);
             safeSeconds = Math.round((safeMinutes % 1) * 60);
@@ -783,6 +790,7 @@ public class MainPage extends Activity {
         BPf = extras.getDouble("BPf");
         LFL = extras.getDouble("LFL");
         UFL = extras.getDouble("UFL");
+        //VDensity = //extras.getDouble ("VDensity");
         FlashPoint = extras.getDouble("FlashPoint");
         lengthValueNum = extras.getDouble("lengthValue");
         widthValueNum = extras.getDouble("widthValue");

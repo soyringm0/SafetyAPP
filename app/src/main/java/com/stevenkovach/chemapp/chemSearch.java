@@ -154,15 +154,11 @@ public class chemSearch extends Activity {
 
             }
 
-
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
         });
-
-
-
 
         // mDbHelper.close();
 

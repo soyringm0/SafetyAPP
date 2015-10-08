@@ -27,7 +27,7 @@
             android:name=".chemSearch"
             android:label="@string/title_activity_chem_search" >
         </activity>
-       <!-- looked like a duplicate so was commente out to compile.
+       <!-- looked like a duplicate so was comment out to compile.
        <activity
             android:name=".chem_properties"
             android:label="@string/title_activity_chem_properties" >
