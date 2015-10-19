@@ -305,7 +305,7 @@ public class MainPage extends Activity {
                 if(mLabCheck.isChecked() || mCustomCheck.isChecked())
                 {
                     mLabCheck.setChecked(false);    //Lab check set to blank
-                    stdSizeSpinner.setVisibility(View.VISIBLE); //Spinner visible
+                    //stdSizeSpinner.setVisibility(View.VISIBLE); //Spinner visible
                     mCustomCheck.setChecked(false); //Custom check set to blank
                     mRoomUnitsLayout.setVisibility(View.GONE);  //Custom layout gone
                     hoodChecked = 1;
@@ -726,7 +726,7 @@ public class MainPage extends Activity {
             if (hoodChecked == 1) {
                 mHoodCheck.setChecked(true);
                 mLabCheck.setChecked(false);    //Lab check set to blank
-                stdSizeSpinner.setVisibility(View.VISIBLE); //Spinner visible
+                //stdSizeSpinner.setVisibility(View.VISIBLE); //Spinner visible
                 mCustomCheck.setChecked(false); //Custom check set to blank
                 //mRoomUnitsLayout.setVisibility(View.GONE);  //Custom layout gone
                 hoodChecked = 1;
